@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d13">
+<title>HYAENE // SYSTEMS</title>
+<meta name="description" content="Independent Systems Development. Think. Build. Improve.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #080d13;
+    --panel: #101923;
+    --cyan: #22d3ee;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #164e63;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Consolas, monospace;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--cyan);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+nav a:hover { color: var(--cyan); }
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 10%;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+h1 span { color: var(--cyan); }
+
+.subtitle {
+    color: var(--muted);
+    max-width: 600px;
+}
+
+.status {
+    margin-top: 35px;
+    color: var(--cyan);
+    font-size: 0.85rem;
+}
+
+.status::before {
+    content: "● ";
+    color: #22c55e;
+}
+
+section {
+    padding: 75px 10%;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    color: var(--cyan);
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 25px;
+    transition: 0.2s;
+}
+
+.project:hover {
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.project p, section > p { color: var(--muted); }
+
+.terminal {
+    background: #020609;
+    border: 1px solid var(--border);
+    padding: 20px;
+    max-width: 700px;
+}
+
+.terminal-output {
+    min-height: 100px;
+    color: var(--muted);
+    white-space: pre-wrap;
+    margin: 15px 0;
+}
+
+.terminal form {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--cyan);
+    padding: 10px;
+    font: inherit;
+    outline: none;
+}
+
+.terminal button {
+    background: var(--cyan);
+    color: #080d13;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 65px 7%;
+    }
+
+    section { padding: 55px 7%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HYAENE // SYSTEMS</div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#terminal">TERMINAL</a>
+        <a href="#security">SECURITY</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="eyebrow">INDEPENDENT SYSTEMS DEVELOPMENT</div>
+    <h1>THINK.<br>BUILD.<br><span>IMPROVE.</span></h1>
+    <p class="subtitle">
+        Exploring systems. Building solutions.
+        Learning through experimentation.
+    </p>
+    <div class="status">SYSTEM INITIALIZED</div>
+</section>
+
+<section id="about">
+    <h2>// ABOUT</h2>
+    <p>
+        HYAENE // SYSTEMS is an independent development
+        project focused on systems, automation,
+        programming and practical experimentation.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>// PROJECTS</h2>
+    <div class="project-grid">
+        <article class="project">
+            <h3>DRACOOL</h3>
+            <p>
+                Linux-based automation and system
+                management project.
+            </p>
+        </article>
+
+        <article class="project">
+            <h3>SYSTEM BREACH</h3>
+            <p>
+                An interactive browser-based
+                roguelike experiment.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section id="terminal">
+    <h2>// INTERACTIVE TERMINAL</h2>
+    <div class="terminal">
+        <div class="eyebrow">HYAENE TERMINAL v1.0</div>
+        <div class="terminal-output" id="output">Welcome to HYAENE // SYSTEMS.
+Type "help" to see available commands.</div>
+
+        <form id="terminal-form">
+            <input
+                id="terminal-input"
+                type="text"
+                placeholder="Enter command..."
+                autocomplete="off"
+                maxlength="40"
+                aria-label="Terminal command"
+            >
+            <button type="submit">EXECUTE</button>
+        </form>
+    </div>
+</section>
+
+<section id="security">
+    <h2>// SECURITY & PRIVACY</h2>
+    <p>
+        Privacy by design. No user accounts.
+        No tracking. No unnecessary data collection.
+        Local-first functionality.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    HYAENE // SYSTEMS · INDEPENDENT DEVELOPMENT · 2026
+</footer>
+
+<script>
+"use strict";
+
+const form = document.getElementById("terminal-form");
+const input = document.getElementById("terminal-input");
+const output = document.getElementById("output");
+
+const commands = {
+    help: "Available commands: help, about, projects, status, clear",
+    about: "HYAENE // SYSTEMS - Independent Systems Development.",
+    projects: "Current projects: DRACOOL, SYSTEM BREACH.",
+    status: "SYSTEM STATUS: INITIALIZED",
+    clear: ""
+};
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const command = input.value.trim().toLowerCase();
+
+    if (!command) return;
+
+    if (command === "clear") {
+        output.textContent = "";
+    } else {
+        const response = commands[command] ?? "Unknown command. Type help.";
+        output.textContent += "\n\n> " + command + "\n" + response;
+    }
+
+    input.value = "";
+});
+</script>
+
+</body>
+</html>
